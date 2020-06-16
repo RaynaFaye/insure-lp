@@ -5,6 +5,11 @@ body {
   font-size: 16px;
   margin: 0;
 }
+.title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  color: hsl(270, 9%, 17%);
+}
 .link-button {
   padding: 10px 30px;
 }
@@ -42,6 +47,24 @@ body {
 .header__menu__link-button:focus {
   background: hsl(270, 9%, 17%);
   color: #ffffff;
+}
+/* We're Different Section */
+.difference {
+  padding: 0 150px;
+  margin: 50px 0 150px 0;
+}
+.difference__title {
+  font-size: 60px;
+}
+.difference__facts {
+  display: flex;
+}
+.difference__facts__title {
+  font-size: 28px;
+}
+.difference__facts__paragraph {
+  color: hsl(273, 4%, 51%);
+  margin-right: 25px;
 }
 /* Attribution section */
 .attribution {
