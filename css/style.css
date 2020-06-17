@@ -21,10 +21,8 @@ body {
 .link-button:hover,
 .link-button:focus {
   color: hsl(270, 9%, 17%);
-  /* border: 2px solid #ffffff; */
   background: #ffffff;
 }
-
 /* Header section */
 .header {
   display: flex;
@@ -61,7 +59,6 @@ body {
 }
 /* Intro Section */
 .intro {
-  /* padding: 50px 150px 0 150px; */
   background: url(../images/bg-pattern-intro-right-desktop.svg) right -75px no-repeat,
     url(../images/bg-pattern-intro-left-desktop.svg) left bottom no-repeat;
   display: grid;
@@ -210,4 +207,162 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+@media all and (max-width: 1184px) {
+  /* Header */
+  .header {
+    padding: 25px 75px;
+  }
+  /* Intro section */
+  .intro {
+    grid-template-columns: 75px 1fr 1fr 75px;
+  }
+  .intro__title {
+    font-size: 50px;
+  }
+  /* We're Different Section */
+  .difference {
+    padding: 0 75px;
+  }
+  .difference__title {
+    font-size: 50px;
+  }
+  /* Find out more section */
+  .find-out {
+    margin: 0 75px 150px 75px;
+  }
+  .find_out__title {
+    font-size: 46px;
+  }
+  /* Footer */
+  .footer {
+    padding: 50px 75px;
+  }
+}
+@media all and (max-width: 968px) {
+  /* Header */
+  .header {
+    padding: 25px;
+  }
+  /* Intro section */
+  .intro {
+    grid-template-columns: 25px 1fr 1fr 25px;
+    grid-template-rows: 25px 1fr 75px 75px;
+  }
+  .intro__title {
+    font-size: 46px;
+  }
+  /* We're Different Section */
+  .difference {
+    padding: 0 25px;
+  }
+  .difference__title {
+    font-size: 46px;
+  }
+  /* Find out more section */
+  .find-out {
+    margin: 0 25px 150px 25px;
+  }
+  .find_out__title {
+    font-size: 36px;
+  }
+  /* Footer */
+  .footer {
+    padding: 50px 25px;
+  }
+}
+@media all and (max-width: 768px) {
+  /* Header section */
+  .header__menu {
+    display: none;
+  }
+  /* Intro Section */
+  .intro {
+    background: url(../images/bg-pattern-intro-right-mobile.svg) right bottom -50px no-repeat,
+      url(..//images/bg-pattern-intro-left-mobile.svg) left bottom 450px no-repeat;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 150px;
+    text-align: center;
+  }
+  .intro::after {
+    grid-column: 1;
+    justify-self: center;
+    width: 40%;
+  }
+  .intro__color-block {
+    grid-row: 2;
+  }
+  .intro__content {
+    grid-column: 1;
+    grid-row: 2;
+
+    margin-right: 0;
+    padding: 50px 25px;
+  }
+  .intro__content::before {
+    display: none;
+  }
+  .intro__image-block {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+  }
+  .intro__image {
+    height: 100%;
+  }
+  /* We're Different Section */
+  .difference {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .difference__facts {
+    flex-direction: column;
+  }
+  .difference__facts__block {
+    margin-bottom: 50px;
+  }
+  .difference__facts__paragraph {
+    margin-right: 0;
+  }
+  /* Find out more section */
+  .find-out {
+    background: hsl(256, 26%, 20%) no-repeat url(../images/bg-pattern-how-we-work-mobile.svg);
+    background-position: right;
+    text-align: center;
+    flex-direction: column;
+  }
+  .find_out__title {
+    margin-bottom: 50px;
+  }
+  .find-out__link {
+    margin-right: 0px;
+  }
+  /* Footer */
+  .footer {
+    background: hsl(0, 0%, 98%) no-repeat url(../images/bg-pattern-footer-mobile.svg);
+    text-align: center;
+    padding: 75px 25px 50px 25px;
+  }
+  .footer__logo-social {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .footer__social-links {
+    margin-top: 25px;
+  }
+  .footer__menu {
+    flex-direction: column;
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 480px) {
+  /* Intro Section */
+  .intro {
+    background: url(../images/bg-pattern-intro-right-mobile.svg) right bottom -50px no-repeat,
+      url(..//images/bg-pattern-intro-left-mobile.svg) left center no-repeat;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 150px;
+  }
 }
