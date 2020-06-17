@@ -279,7 +279,7 @@ body {
 @media all and (max-width: 768px) {
   /* Header section */
   .header__menu {
-    display: none;
+    display: block;
     text-align: center;
     background: hsl(270, 9%, 17%) url(../images/bg-pattern-mobile-nav.svg) bottom no-repeat;
     background-size: 100%;
@@ -291,6 +291,9 @@ body {
     left: 0px;
     z-index: 10;
     padding: 50px 25px 0 25px;
+  }
+  .header__menu__hidden {
+    display: none;
   }
   .header__mobile-menu__button {
     display: block;
@@ -304,6 +307,11 @@ body {
   }
   .header__menu__link {
     color: #ffffff;
+  }
+  .header__menu__link:hover,
+  .header__menu__link:focus {
+    color: #ffffff;
+    text-decoration: underline;
   }
   .header__menu__link-button {
     color: #ffffff;
@@ -348,6 +356,7 @@ body {
     grid-column: 1;
     grid-row: 1;
     z-index: 1;
+    height: 100%;
   }
   .intro__image {
     height: 100%;
