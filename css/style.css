@@ -30,6 +30,9 @@ body {
   justify-content: space-between;
   padding: 25px 150px;
 }
+.header__mobile-menu__button {
+  display: none;
+}
 .header__menu {
   display: flex;
   list-style: none;
@@ -277,6 +280,43 @@ body {
   /* Header section */
   .header__menu {
     display: none;
+    text-align: center;
+    background: hsl(270, 9%, 17%) url(../images/bg-pattern-mobile-nav.svg) bottom no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 65%;
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    z-index: 10;
+    padding: 50px 25px 0 25px;
+  }
+  .header__mobile-menu__button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .header__menu__item {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .header__menu__link {
+    color: #ffffff;
+  }
+  .header__menu__link-button {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    display: block;
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .header__menu__link-button:hover,
+  .header__menu__link-button:focus {
+    color: hsl(270, 9%, 17%);
+    background: #ffffff;
   }
   /* Intro Section */
   .intro {
@@ -364,5 +404,8 @@ body {
       url(..//images/bg-pattern-intro-left-mobile.svg) left center no-repeat;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 150px;
+  }
+  .header__menu__link-button {
+    width: 90%;
   }
 }
